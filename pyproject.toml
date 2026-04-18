@@ -10,6 +10,7 @@ dependencies = [
     "docling>=2.84.0",
     "easyocr>=1.7.2",
     "img2table>=1.4.2",
+    "litellm>=1.80.0",
     "marker-pdf>=1.10.2",
     "paddleocr>=3.4.0",
     "paddlepaddle>=3.3.1",
