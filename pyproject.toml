@@ -1,0 +1,26 @@
+[project]
+name = "aria-scraper"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "beautifulsoup4>=4.14.3",
+    "chromadb>=1.5.7",
+    "docling>=2.84.0",
+    "easyocr>=1.7.2",
+    "img2table>=1.4.2",
+    "marker-pdf>=1.10.2",
+    "paddleocr>=3.4.0",
+    "paddlepaddle>=3.3.1",
+    "pandas>=3.0.2",
+    "pdfplumber>=0.11.9",
+    "pillow>=10.2.0,<11.0.0",
+    "pymupdf>=1.27.2.2",
+    "rapidocr-onnxruntime>=1.4.4",
+    "requests>=2.33.1",
+    "sentence-transformers>=5.4.0",
+    "surya-ocr>=0.17.1",
+    "tabulate>=0.10.0",
+    "unstructured>=0.22.16",
+]

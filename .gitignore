@@ -1,0 +1,25 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Downloaded PDFs
+aria_memos/
+
+# Generated pipeline outputs
+output/
+chunks.jsonl
+batch_results.json
+master_index.json
+
+# Vector database
+chroma_db/
+
+# Environment variables
+.env
