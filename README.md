@@ -1,6 +1,6 @@
-# aria-scraper
+# aria-rag
 
-A retrieval-augmented generation (RAG) pipeline for exploring FDA ARIA (Accelerated Review of Information and Analysis) drug review memos published by the [Sentinel Initiative](https://www.sentinelinitiative.org/methods-data-tools/aria). All source documents are publicly available FDA records.
+A retrieval-augmented generation (RAG) system for querying FDA drug safety reviews. Ask natural language questions across ARIA (Accelerated Review of Information and Analysis) memos published by the [Sentinel Initiative](https://www.sentinelinitiative.org/methods-data-tools/aria) — covering sufficiency reviews, clinical reviews, and other sub-documents for dozens of drugs. All source documents are publicly available FDA records.
 
 ## What it does
 
@@ -194,3 +194,19 @@ output/
       <ref_id>_<doctype>.md  # assembled sub-documents
       index.json
 ```
+
+## Roadmap
+
+### Query experience
+- Interactive query loop — load the embedding model once, run multiple questions without restarting
+- Partial matching for `--doctype` filter (currently requires exact string)
+- Simple web UI (e.g. Streamlit) for non-CLI use
+
+### Expand data coverage
+Currently the pipeline scrapes one PDF per drug — the ARIA memo. Each drug page on the Sentinel Initiative also links to an **FDA Approval Package** on accessdata.fda.gov, which contains the full NDA/BLA review package: medical reviews, statistical reviews, labeling documents, and more.
+
+Next step: for each drug, follow the approval package link, scrape all sub-documents from that table of contents, and run them through the same extraction and embedding pipeline. This will significantly expand the safety information available to the RAG.
+
+### Infrastructure
+- Automated tests for extraction and retrieval
+- Scheduled re-scrape to pick up newly published ARIA memos
